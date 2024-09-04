@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+/* Switch styling for Night Mode/Day Mode */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-image: url('./images/moon.png');
+    background-size: cover;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #333;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-image: url('images/sunny.png');
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+
+
+.Maincontainer {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+}
+
+.Maincontainer h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease;
+}
+
+.Maincontainer p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.Maincontainer .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.Maincontainer.btn:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: absolute;
+    
+    width: 95%;
+}
+
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 0; 
+}
+
+.image-gallery img {
+    width: 25%;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.image-gallery .image-container {
+    position: relative;
+    width: 100%;
+    margin: 10px;
+   
+}
+
+.image-gallery .image-container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.image-gallery .image-container .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 90%;
+    height: 0;
+    transition: .5s ease;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding: 14px;
+}
+.image-gallery .image-container .overlay p
+{
+    font-size: 8px;
+}
+
+.image-gallery .image-container:hover .overlay {
+    height: 90%;
+    
+}
+#mode-toggle {
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#mode-toggle:hover {
+    background-color: #777;
+}
+body.night-mode {
+    background-color: #333;
+    color: #ffffff;
+}
+
+body.night-mode .top-panel {
+    background-color: #222;
+}
+
+
+
+body.night-mode .Maincontainer {
+    background-color: #444;
+}
+
+body.night-mode footer {
+    background-color: #222;
+}
+

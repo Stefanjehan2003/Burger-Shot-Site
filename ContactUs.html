@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="ContactUs.css">
+</head>
+<body>
+
+    <div class="top-panel">
+        <div class="logo">Burger Shot</div>
+        <nav class="navigation">
+            <a href="MainPage.html">Home</a>
+            <a href="AboutUs.html">About</a>
+            <a href="Offers.html">Menu</a>
+            <a href="ContactUs.html">Contact Us</a>
+        </nav>
+        <label class="switch">
+            <input type="checkbox" id="mode-toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="ContactUs.js"></script>
+</body>
+</html>
